@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <script src="./index.js"></script>
+  </head>
+  <body>
+    <table border="1" cellpadding="5" cellspacing="0">
+      <tr>
+        <th>Color #1</th>
+        <td>
+          <input type="color" id="color1i" value="#FF0000" />
+        </td>
+        <td id="color1c" style="width: 50px; background-color: #00ffff">
+          &nbsp;
+        </td>
+      </tr>
+      <tr>
+        <th>Color #2</th>
+        <td>
+          <input type="color" id="color2i" value="#00FF00" />
+        </td>
+        <td id="color2c" style="width: 50px; background-color: #ff00ff">
+          &nbsp;
+        </td>
+      </tr>
+      <tr>
+        <th>Mixing</th>
+        <td id="colorSumI" style="width: 50px; background-color: #000001">
+          &nbsp;
+        </td>
+        <td id="colorSumC" style="width: 50px; background-color: #000001">
+          &nbsp;
+        </td>
+      </tr>
+    </table>
+  </body>
+  <script>
+    let elements = {
+      color1i: document.getElementById("color1i"),
+      color1c: document.getElementById("color1c"),
+      color2i: document.getElementById("color2i"),
+      color2c: document.getElementById("color2c"),
+      colorSumI: document.getElementById("colorSumI"),
+      colorSumC: document.getElementById("colorSumC"),
+    };
+    const processColor = (color) => {
+      let output = complement(color);
+      elements.colorSumI.style.backgroundColor = addColors(
+        elements.color1i.value,
+        elements.color2i.value
+      );
+      elements.colorSumC.style.backgroundColor = complement(
+        elements.colorSumI.style.backgroundColor
+      );
+      return output;
+    };
+    elements.color1i.addEventListener("input", function () {
+      elements.color1c.style.backgroundColor = processColor(this.value);
+    });
+    elements.color2i.addEventListener("input", function () {
+      elements.color2c.style.backgroundColor = processColor(this.value);
+    });
+    processColor(elements.color1c.style.backgroundColor);
+    /*setTimeout(() => {
+      // debugger;
+      let a = 5;
+      printDec(a);
+      a = ~a;
+      printDec(a);
+      a = 10;
+      printDec(a);
+    }, 10e3);
+    */
+  </script>
+</html>
