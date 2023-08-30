@@ -1,0 +1,16 @@
+{
+  "orgSource": null,
+  "orgDestination": null,
+  "sObjectsData": [],
+  "sObjectsMetadata": [],
+  "rootFolder": null,
+  "includeAllCustom": false,
+  "customObjectsToIgnore": null,
+  "stopOnErrors": true,
+  "ignoreFields": null,
+  "copyToProduction": false,
+  "twoPassReferenceFields": null,
+  "deleteDestination": false,
+  "useBulkAPI": false,
+  "bulkPollingTimeout": 1800000
+}

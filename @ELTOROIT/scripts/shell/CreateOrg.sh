@@ -1,68 +1,68 @@
-# Execute in Mac using: ./@ELTOROIT/scripts/CreateOrg.sh
+# # # # # Execute in Mac using: ./@ELTOROIT/scripts/CreateOrg.sh
 
-# --- Define local folder
-	DIR="${BASH_SOURCE%/*}"
-	if [[ ! -d "$DIR" ]]; then DIR="$PWD"; fi
+# # # # # --- Define local folder
+# # # # 	DIR="${BASH_SOURCE%/*}"
+# # # # 	if [[ ! -d "$DIR" ]]; then DIR="$PWD"; fi
 
-# --- check for node_modules folder
-	if [ ! -d "node_modules" ]; then
-		echo "Please run npm install"
-		exit 0
-	fi
+# # # # # --- check for node_modules folder
+# # # # 	if [ ! -d "node_modules" ]; then
+# # # # 		echo "Please run npm install"
+# # # # 		exit 0
+# # # # 	fi
 
-# --- check for ETCopyData
-	echo "Validating ETCopyData..."
-	echo "n" | sfdx ETCopyData > /dev/null 2>&1
-	if [ ! $? -eq 0 ]; then
-		echo "Please ensure ETCopyData is installed. Check this repo: https://github.com/eltoroit/ETCopyData"
-		exit 0
-	fi
+# # # # # --- check for ETCopyData
+# # # # 	# echo "Validating ETCopyData..."
+# # # # 	# echo "n" | sfdx ETCopyData > /dev/null 2>&1
+# # # # 	# if [ ! $? -eq 0 ]; then
+# # # # 	# 	echo "Please ensure ETCopyData is installed. Check this repo: https://github.com/eltoroit/ETCopyData"
+# # # # 	# 	exit 0
+# # # # 	# fi
 
-# --- Batch variables
-	# Alias for scratch org
-	ALIAS=soDEMO
+# # # # # --- Batch variables
+# # # # 	# Alias for scratch org
+# # # # 	ALIAS=soDEMO
 
-	# How long will the scratch org live (max 30)
-	DAYS=10
+# # # # 	# How long will the scratch org live (max 30)
+# # # # 	DAYS=10
 	
-	# Install required packages before pushing
-	# Sample: PACKAGES=("04tB0000000P1yA" "04tB0000000P1yB" "04tB0000000P1yC")
-	PACKAGES=("04t1t000003Po3VAAS")
+# # # 	# Install required packages before pushing
+# # # 	# Sample: PACKAGES=("04tB0000000P1yA" "04tB0000000P1yB" "04tB0000000P1yC")
+# # # 	PACKAGES=("04t1t000003Po3VAAS")
 
-	# Permission Set names
-	# Sample: PACKAGES=("PS_01" "PS_02" "PS_03")
-	PERM_SETS=("psDemo")
+# # # 	# Permission Set names
+# # # 	# Sample: PACKAGES=("PS_01" "PS_02" "PS_03")
+# # # 	PERM_SETS=("psDemo")
 
-	# Prepare scratch org for deployment. Some metadata needs to be deployed first.
-	# Sample: PREPARE_ORG=("@ELTOROIT/metadata/API/")
-	PREPARE_ORG=("@ELTOROIT/metadata/API/")
+# # # 	# Prepare scratch org for deployment. Some metadata needs to be deployed first.
+# # # 	# Sample: PREPARE_ORG=("@ELTOROIT/metadata/API/")
+# # # 	PREPARE_ORG=("@ELTOROIT/metadata/API/")
 	
-	# Path to Apex code to execute anonymously, multiple files can be executed at each step, if multiple Apex transactions are needed
-	# Sample: ("$DIR/File1.txt" "$DIR/File2.txt")
-	EXEC_ANON_APEX_BEFORE_PUSH= 
-	EXEC_ANON_APEX_AFTER_PUSH=("$DIR/../apex/SetUserRecord.apex" )
-	EXEC_ANON_APEX_AFTER_DATA=
+# # 	# Path to Apex code to execute anonymously, multiple files can be executed at each step, if multiple Apex transactions are needed
+# # 	# Sample: ("$DIR/File1.txt" "$DIR/File2.txt")
+# # 	EXEC_ANON_APEX_BEFORE_PUSH= 
+# # 	EXEC_ANON_APEX_AFTER_PUSH=("$DIR/../apex/SetUserRecord.apex" )
+# # 	EXEC_ANON_APEX_AFTER_DATA=
 	
-	# Is there any additional manual configuration required BEFORE pushing metadata?
-	# Sample: /lightning/setup/SalesforceMobileAppQuickStart/home
-	PATH2SETUP_METADATA_BEFORE=
+# 	# Is there any additional manual configuration required BEFORE pushing metadata?
+# 	# Sample: /lightning/setup/SalesforceMobileAppQuickStart/home
+# 	PATH2SETUP_METADATA_BEFORE=
 	
-	# Is there any additional manual configuration required AFTER pushing metadata?
-	# Sample: /lightning/setup/SalesforceMobileAppQuickStart/home
-	PATH2SETUP_METADATA_AFTER=
+# 	# Is there any additional manual configuration required AFTER pushing metadata?
+# 	# Sample: /lightning/setup/SalesforceMobileAppQuickStart/home
+# 	PATH2SETUP_METADATA_AFTER=
 
-	# Do you have a community to publish?
-	# Sample: PUBLISH_COMMUNITY_NAME="Community Name"
-	PUBLISH_COMMUNITY_NAME=
+# 	# Do you have a community to publish?
+# 	# Sample: PUBLISH_COMMUNITY_NAME="Community Name"
+# 	PUBLISH_COMMUNITY_NAME=
 
-	# What is the sandbox to deply to?
-	# Sample: DEPLOY_TO_SANDBOX="Sandbox sfdx alias"
-	DEPLOY_TO_SANDBOX=
-	# Sample: DEPLOY_TO_SANDBOX_FOLDER="./force-apps/deploy"
-	DEPLOY_TO_SANDBOX_FOLDER=
+# 	# What is the sandbox to deply to?
+# 	# Sample: DEPLOY_TO_SANDBOX="Sandbox sfdx alias"
+# 	DEPLOY_TO_SANDBOX=
+# 	# Sample: DEPLOY_TO_SANDBOX_FOLDER="./force-apps/deploy"
+# 	DEPLOY_TO_SANDBOX_FOLDER=
 
-	# If using ETCopyData, where is the data?
-	ETCOPYDATA_FOLDER="./@ELTOROIT/data"
+# 	# If using ETCopyData, where is the data?
+# 	ETCOPYDATA_FOLDER="./@ELTOROIT/data"
 
 # --- Batch boolean variables
 
