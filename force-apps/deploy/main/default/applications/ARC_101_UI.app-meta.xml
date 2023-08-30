@@ -13,8 +13,6 @@
     <navType>Standard</navType>
     <tabs>standard-home</tabs>
     <tabs>standard-Account</tabs>
-    <tabs>xBroker__x</tabs>
-    <tabs>xProperty__x</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>ARC_101_UtilityBar</utilityBar>
 </CustomApplication>
