@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExternalServiceRegistration xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>ARC101EmployeesExtService</label>
+    <namedCredentialReference>ARC101_Employees_NameCredLegacy</namedCredentialReference>
+    <operations>
+        <active>true</active>
+        <name>addemployee</name>
+    </operations>
+    <operations>
+        <active>true</active>
+        <name>deleteemployee</name>
+    </operations>
+    <operations>
+        <active>true</active>
+        <name>getallemployees</name>
+    </operations>
+    <operations>
+        <active>true</active>
+        <name>getemployeebyid</name>
+    </operations>
+    <operations>
+        <active>true</active>
+        <name>updateemployee</name>
+    </operations>
+    <registrationProviderType>Custom</registrationProviderType>
+    <schema>{&quot;openapi&quot;:&quot;3.0.3&quot;,&quot;info&quot;:{&quot;title&quot;:&quot;Employees&quot;,&quot;version&quot;:&quot;1.0&quot;,&quot;description&quot;:&quot;A simple REST API for providing basic CRUD-access to the employees in a dummy database.&quot;},&quot;servers&quot;:[{&quot;url&quot;:&quot;http://localhost:3000&quot;},{&quot;url&quot;:&quot;https://et-arc-101-71454c229217.herokuapp.com&quot;}],&quot;components&quot;:{&quot;schemas&quot;:{&quot;Employee&quot;:{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;id&quot;:{&quot;type&quot;:&quot;integer&quot;,&quot;format&quot;:&quot;int32&quot;},&quot;firstName&quot;:{&quot;type&quot;:&quot;string&quot;},&quot;lastName&quot;:{&quot;type&quot;:&quot;string&quot;},&quot;title&quot;:{&quot;type&quot;:&quot;string&quot;}},&quot;required&quot;:[&quot;lastName&quot;,&quot;firstName&quot;,&quot;title&quot;]},&quot;EmployeeSansID&quot;:{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;lastName&quot;:{&quot;type&quot;:&quot;string&quot;},&quot;firstName&quot;:{&quot;type&quot;:&quot;string&quot;},&quot;title&quot;:{&quot;type&quot;:&quot;string&quot;}},&quot;required&quot;:[&quot;lastName&quot;,&quot;firstName&quot;,&quot;title&quot;]},&quot;EmployeeUpdate&quot;:{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;lastName&quot;:{&quot;type&quot;:&quot;string&quot;},&quot;firstName&quot;:{&quot;type&quot;:&quot;string&quot;},&quot;title&quot;:{&quot;type&quot;:&quot;string&quot;}}},&quot;Error&quot;:{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;message&quot;:{&quot;type&quot;:&quot;string&quot;}}}}},&quot;paths&quot;:{&quot;/employees&quot;:{&quot;get&quot;:{&quot;summary&quot;:&quot;Get all employees&quot;,&quot;operationId&quot;:&quot;GetAllEmployees&quot;,&quot;responses&quot;:{&quot;200&quot;:{&quot;description&quot;:&quot;Successful operation&quot;,&quot;content&quot;:{&quot;application/json&quot;:{&quot;schema&quot;:{&quot;type&quot;:&quot;array&quot;,&quot;items&quot;:{&quot;$ref&quot;:&quot;#/components/schemas/Employee&quot;}}}}}}},&quot;post&quot;:{&quot;summary&quot;:&quot;Add a new employee&quot;,&quot;operationId&quot;:&quot;AddEmployee&quot;,&quot;requestBody&quot;:{&quot;required&quot;:true,&quot;content&quot;:{&quot;application/json&quot;:{&quot;schema&quot;:{&quot;$ref&quot;:&quot;#/components/schemas/EmployeeSansID&quot;}}}},&quot;responses&quot;:{&quot;200&quot;:{&quot;description&quot;:&quot;successful operation&quot;,&quot;content&quot;:{&quot;application/json&quot;:{&quot;schema&quot;:{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;id&quot;:{&quot;type&quot;:&quot;integer&quot;,&quot;format&quot;:&quot;int32&quot;}}}}}}}}},&quot;/employees/{employeeId}&quot;:{&quot;get&quot;:{&quot;summary&quot;:&quot;Find employee by ID&quot;,&quot;operationId&quot;:&quot;GetEmployeeByID&quot;,&quot;parameters&quot;:[{&quot;name&quot;:&quot;employeeId&quot;,&quot;in&quot;:&quot;path&quot;,&quot;required&quot;:true,&quot;schema&quot;:{&quot;type&quot;:&quot;integer&quot;,&quot;format&quot;:&quot;int32&quot;}}],&quot;responses&quot;:{&quot;200&quot;:{&quot;description&quot;:&quot;successful operation&quot;,&quot;content&quot;:{&quot;application/json&quot;:{&quot;schema&quot;:{&quot;$ref&quot;:&quot;#/components/schemas/Employee&quot;}}}},&quot;404&quot;:{&quot;description&quot;:&quot;Employee not found&quot;,&quot;content&quot;:{&quot;application/json&quot;:{&quot;schema&quot;:{&quot;$ref&quot;:&quot;#/components/schemas/Error&quot;}}}}}},&quot;put&quot;:{&quot;summary&quot;:&quot;Updates an employee&quot;,&quot;operationId&quot;:&quot;UpdateEmployee&quot;,&quot;parameters&quot;:[{&quot;name&quot;:&quot;employeeId&quot;,&quot;in&quot;:&quot;path&quot;,&quot;required&quot;:true,&quot;schema&quot;:{&quot;type&quot;:&quot;integer&quot;,&quot;format&quot;:&quot;int32&quot;}}],&quot;requestBody&quot;:{&quot;content&quot;:{&quot;application/json&quot;:{&quot;schema&quot;:{&quot;$ref&quot;:&quot;#/components/schemas/EmployeeUpdate&quot;}}}},&quot;responses&quot;:{&quot;200&quot;:{&quot;description&quot;:&quot;successful operation&quot;,&quot;content&quot;:{&quot;application/json&quot;:{&quot;schema&quot;:{&quot;$ref&quot;:&quot;#/components/schemas/Employee&quot;}}}},&quot;404&quot;:{&quot;description&quot;:&quot;Employee not found&quot;,&quot;content&quot;:{&quot;application/json&quot;:{&quot;schema&quot;:{&quot;$ref&quot;:&quot;#/components/schemas/Error&quot;}}}}}},&quot;delete&quot;:{&quot;summary&quot;:&quot;Deletes an employee&quot;,&quot;operationId&quot;:&quot;DeleteEmployee&quot;,&quot;parameters&quot;:[{&quot;name&quot;:&quot;employeeId&quot;,&quot;in&quot;:&quot;path&quot;,&quot;required&quot;:true,&quot;schema&quot;:{&quot;type&quot;:&quot;integer&quot;,&quot;format&quot;:&quot;int32&quot;}}],&quot;responses&quot;:{&quot;200&quot;:{&quot;description&quot;:&quot;successful operation&quot;}}}}}}</schema>
+    <schemaType>OpenApi3</schemaType>
+    <serviceBinding>{&quot;host&quot;:&quot;localhost&quot;,&quot;basePath&quot;:&quot;&quot;,&quot;allowedSchemes&quot;:[&quot;HTTP&quot;,&quot;HTTPS&quot;],&quot;requestMediaTypes&quot;:[],&quot;responseMediaTypes&quot;:[],&quot;compatibleMediaTypes&quot;:{}}</serviceBinding>
+    <status>Complete</status>
+    <systemVersion>4</systemVersion>
+</ExternalServiceRegistration>
