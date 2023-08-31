@@ -1769,69 +1769,6 @@
 	},
 	"rejected": {
 		"ADD_FIELD": {
-			"Campaign.IsDeleted": [
-				"Must be createable"
-			],
-			"Campaign.ParentId": [
-				"Recursive parenting for field references is supported, but requires the field to be configured as twoPassReferenceField"
-			],
-			"Campaign.NumberOfLeads": [
-				"Must be createable"
-			],
-			"Campaign.NumberOfConvertedLeads": [
-				"Must be createable"
-			],
-			"Campaign.NumberOfContacts": [
-				"Must be createable"
-			],
-			"Campaign.NumberOfResponses": [
-				"Must be createable"
-			],
-			"Campaign.NumberOfOpportunities": [
-				"Must be createable"
-			],
-			"Campaign.NumberOfWonOpportunities": [
-				"Must be createable"
-			],
-			"Campaign.AmountAllOpportunities": [
-				"Must be createable"
-			],
-			"Campaign.AmountWonOpportunities": [
-				"Must be createable"
-			],
-			"Campaign.OwnerId": [
-				"User asked for this field to be excluded",
-				"Parent sObject [User] is not processed"
-			],
-			"Campaign.CreatedDate": [
-				"Must be createable"
-			],
-			"Campaign.CreatedById": [
-				"Must be createable",
-				"Parent sObject [User] is not processed"
-			],
-			"Campaign.LastModifiedDate": [
-				"Must be createable"
-			],
-			"Campaign.LastModifiedById": [
-				"Must be createable",
-				"Parent sObject [User] is not processed"
-			],
-			"Campaign.SystemModstamp": [
-				"Must be createable"
-			],
-			"Campaign.LastActivityDate": [
-				"Must be createable"
-			],
-			"Campaign.LastViewedDate": [
-				"Must be createable"
-			],
-			"Campaign.LastReferencedDate": [
-				"Must be createable"
-			],
-			"Campaign.CampaignMemberRecordTypeId": [
-				"Parent sObject [RecordType] is not processed"
-			],
 			"Lead.IsDeleted": [
 				"Must be createable"
 			],
@@ -1904,6 +1841,69 @@
 			],
 			"Lead.IndividualId": [
 				"Parent sObject [Individual] is not processed"
+			],
+			"Campaign.IsDeleted": [
+				"Must be createable"
+			],
+			"Campaign.ParentId": [
+				"Recursive parenting for field references is supported, but requires the field to be configured as twoPassReferenceField"
+			],
+			"Campaign.NumberOfLeads": [
+				"Must be createable"
+			],
+			"Campaign.NumberOfConvertedLeads": [
+				"Must be createable"
+			],
+			"Campaign.NumberOfContacts": [
+				"Must be createable"
+			],
+			"Campaign.NumberOfResponses": [
+				"Must be createable"
+			],
+			"Campaign.NumberOfOpportunities": [
+				"Must be createable"
+			],
+			"Campaign.NumberOfWonOpportunities": [
+				"Must be createable"
+			],
+			"Campaign.AmountAllOpportunities": [
+				"Must be createable"
+			],
+			"Campaign.AmountWonOpportunities": [
+				"Must be createable"
+			],
+			"Campaign.OwnerId": [
+				"User asked for this field to be excluded",
+				"Parent sObject [User] is not processed"
+			],
+			"Campaign.CreatedDate": [
+				"Must be createable"
+			],
+			"Campaign.CreatedById": [
+				"Must be createable",
+				"Parent sObject [User] is not processed"
+			],
+			"Campaign.LastModifiedDate": [
+				"Must be createable"
+			],
+			"Campaign.LastModifiedById": [
+				"Must be createable",
+				"Parent sObject [User] is not processed"
+			],
+			"Campaign.SystemModstamp": [
+				"Must be createable"
+			],
+			"Campaign.LastActivityDate": [
+				"Must be createable"
+			],
+			"Campaign.LastViewedDate": [
+				"Must be createable"
+			],
+			"Campaign.LastReferencedDate": [
+				"Must be createable"
+			],
+			"Campaign.CampaignMemberRecordTypeId": [
+				"Parent sObject [RecordType] is not processed"
 			],
 			"Opportunity.IsDeleted": [
 				"Must be createable"
@@ -2174,144 +2174,6 @@
 			]
 		},
 		"ADD_CHILD": {
-			"Campaign.null => AIInsightValue": [
-				"Child sObject [AIInsightValue] is not processed"
-			],
-			"Campaign.null => AIRecordInsight": [
-				"Child sObject [AIRecordInsight] is not processed"
-			],
-			"Campaign.ActivityHistories => ActivityHistory": [
-				"Child sObject [ActivityHistory] is not processed"
-			],
-			"Campaign.AttachedContentDocuments => AttachedContentDocument": [
-				"Child sObject [AttachedContentDocument] is not processed"
-			],
-			"Campaign.Attachments => Attachment": [
-				"Child sObject [Attachment] is not processed"
-			],
-			"Campaign.ChildCampaigns => Campaign": [
-				"Current version does not allow recursive parenting for parent-child relations"
-			],
-			"Campaign.null => CampaignChangeEvent": [
-				"Child sObject [CampaignChangeEvent] is not processed"
-			],
-			"Campaign.Feeds => CampaignFeed": [
-				"Child sObject [CampaignFeed] is not processed"
-			],
-			"Campaign.Histories => CampaignHistory": [
-				"Child sObject [CampaignHistory] is not processed"
-			],
-			"Campaign.CampaignMembers => CampaignMember": [
-				"Child sObject [CampaignMember] is not processed"
-			],
-			"Campaign.null => CampaignMemberChangeEvent": [
-				"Child sObject [CampaignMemberChangeEvent] is not processed"
-			],
-			"Campaign.CampaignMemberStatuses => CampaignMemberStatus": [
-				"Child sObject [CampaignMemberStatus] is not processed"
-			],
-			"Campaign.null => CampaignMemberStatusChangeEvent": [
-				"Child sObject [CampaignMemberStatusChangeEvent] is not processed"
-			],
-			"Campaign.Shares => CampaignShare": [
-				"Child sObject [CampaignShare] is not processed"
-			],
-			"Campaign.RecordAssociatedGroups => CollaborationGroupRecord": [
-				"Child sObject [CollaborationGroupRecord] is not processed"
-			],
-			"Campaign.CombinedAttachments => CombinedAttachment": [
-				"Child sObject [CombinedAttachment] is not processed"
-			],
-			"Campaign.null => ContentDistribution": [
-				"Child sObject [ContentDistribution] is not processed"
-			],
-			"Campaign.ContentDocumentLinks => ContentDocumentLink": [
-				"Child sObject [ContentDocumentLink] is not processed"
-			],
-			"Campaign.null => ContentDocumentLinkChangeEvent": [
-				"Child sObject [ContentDocumentLinkChangeEvent] is not processed"
-			],
-			"Campaign.null => ContentVersion": [
-				"Child sObject [ContentVersion] is not processed"
-			],
-			"Campaign.null => ContentVersionChangeEvent": [
-				"Child sObject [ContentVersionChangeEvent] is not processed"
-			],
-			"Campaign.Emails => EmailMessage": [
-				"Child sObject [EmailMessage] is not processed"
-			],
-			"Campaign.null => EmailMessageChangeEvent": [
-				"Child sObject [EmailMessageChangeEvent] is not processed"
-			],
-			"Campaign.FeedSubscriptionsForEntity => EntitySubscription": [
-				"Child sObject [EntitySubscription] is not processed"
-			],
-			"Campaign.Events => Event": [
-				"Child sObject [Event] is not processed"
-			],
-			"Campaign.null => EventChangeEvent": [
-				"Child sObject [EventChangeEvent] is not processed"
-			],
-			"Campaign.null => EventRelationChangeEvent": [
-				"Child sObject [EventRelationChangeEvent] is not processed"
-			],
-			"Campaign.null => FeedComment": [
-				"Child sObject [FeedComment] is not processed"
-			],
-			"Campaign.null => FeedItem": [
-				"Child sObject [FeedItem] is not processed"
-			],
-			"Campaign.null => FlowExecutionErrorEvent": [
-				"Child sObject [FlowExecutionErrorEvent] is not processed"
-			],
-			"Campaign.FlowOrchestrationWorkItems => FlowOrchestrationWorkItem": [
-				"Child sObject [FlowOrchestrationWorkItem] is not processed"
-			],
-			"Campaign.null => FlowRecordRelation": [
-				"Child sObject [FlowRecordRelation] is not processed"
-			],
-			"Campaign.ListEmails => ListEmail": [
-				"Child sObject [ListEmail] is not processed"
-			],
-			"Campaign.null => ListEmailChangeEvent": [
-				"Child sObject [ListEmailChangeEvent] is not processed"
-			],
-			"Campaign.ListEmailRecipientSources => ListEmailRecipientSource": [
-				"Child sObject [ListEmailRecipientSource] is not processed"
-			],
-			"Campaign.OpenActivities => OpenActivity": [
-				"Child sObject [OpenActivity] is not processed"
-			],
-			"Campaign.null => OpportunityChangeEvent": [
-				"Child sObject [OpportunityChangeEvent] is not processed"
-			],
-			"Campaign.null => OutgoingEmail": [
-				"Child sObject [OutgoingEmail] is not processed"
-			],
-			"Campaign.ProcessInstances => ProcessInstance": [
-				"Child sObject [ProcessInstance] is not processed"
-			],
-			"Campaign.null => ProcessInstanceChangeEvent": [
-				"Child sObject [ProcessInstanceChangeEvent] is not processed"
-			],
-			"Campaign.ProcessSteps => ProcessInstanceHistory": [
-				"Child sObject [ProcessInstanceHistory] is not processed"
-			],
-			"Campaign.RecordActions => RecordAction": [
-				"Child sObject [RecordAction] is not processed"
-			],
-			"Campaign.RecordActionHistories => RecordActionHistory": [
-				"Child sObject [RecordActionHistory] is not processed"
-			],
-			"Campaign.Tasks => Task": [
-				"Child sObject [Task] is not processed"
-			],
-			"Campaign.null => TaskChangeEvent": [
-				"Child sObject [TaskChangeEvent] is not processed"
-			],
-			"Campaign.TopicAssignments => TopicAssignment": [
-				"Child sObject [TopicAssignment] is not processed"
-			],
 			"Lead.null => AIInsightValue": [
 				"Child sObject [AIInsightValue] is not processed"
 			],
@@ -2476,6 +2338,144 @@
 			],
 			"Lead.PersonRecord => UserEmailPreferredPerson": [
 				"Child sObject [UserEmailPreferredPerson] is not processed"
+			],
+			"Campaign.null => AIInsightValue": [
+				"Child sObject [AIInsightValue] is not processed"
+			],
+			"Campaign.null => AIRecordInsight": [
+				"Child sObject [AIRecordInsight] is not processed"
+			],
+			"Campaign.ActivityHistories => ActivityHistory": [
+				"Child sObject [ActivityHistory] is not processed"
+			],
+			"Campaign.AttachedContentDocuments => AttachedContentDocument": [
+				"Child sObject [AttachedContentDocument] is not processed"
+			],
+			"Campaign.Attachments => Attachment": [
+				"Child sObject [Attachment] is not processed"
+			],
+			"Campaign.ChildCampaigns => Campaign": [
+				"Current version does not allow recursive parenting for parent-child relations"
+			],
+			"Campaign.null => CampaignChangeEvent": [
+				"Child sObject [CampaignChangeEvent] is not processed"
+			],
+			"Campaign.Feeds => CampaignFeed": [
+				"Child sObject [CampaignFeed] is not processed"
+			],
+			"Campaign.Histories => CampaignHistory": [
+				"Child sObject [CampaignHistory] is not processed"
+			],
+			"Campaign.CampaignMembers => CampaignMember": [
+				"Child sObject [CampaignMember] is not processed"
+			],
+			"Campaign.null => CampaignMemberChangeEvent": [
+				"Child sObject [CampaignMemberChangeEvent] is not processed"
+			],
+			"Campaign.CampaignMemberStatuses => CampaignMemberStatus": [
+				"Child sObject [CampaignMemberStatus] is not processed"
+			],
+			"Campaign.null => CampaignMemberStatusChangeEvent": [
+				"Child sObject [CampaignMemberStatusChangeEvent] is not processed"
+			],
+			"Campaign.Shares => CampaignShare": [
+				"Child sObject [CampaignShare] is not processed"
+			],
+			"Campaign.RecordAssociatedGroups => CollaborationGroupRecord": [
+				"Child sObject [CollaborationGroupRecord] is not processed"
+			],
+			"Campaign.CombinedAttachments => CombinedAttachment": [
+				"Child sObject [CombinedAttachment] is not processed"
+			],
+			"Campaign.null => ContentDistribution": [
+				"Child sObject [ContentDistribution] is not processed"
+			],
+			"Campaign.ContentDocumentLinks => ContentDocumentLink": [
+				"Child sObject [ContentDocumentLink] is not processed"
+			],
+			"Campaign.null => ContentDocumentLinkChangeEvent": [
+				"Child sObject [ContentDocumentLinkChangeEvent] is not processed"
+			],
+			"Campaign.null => ContentVersion": [
+				"Child sObject [ContentVersion] is not processed"
+			],
+			"Campaign.null => ContentVersionChangeEvent": [
+				"Child sObject [ContentVersionChangeEvent] is not processed"
+			],
+			"Campaign.Emails => EmailMessage": [
+				"Child sObject [EmailMessage] is not processed"
+			],
+			"Campaign.null => EmailMessageChangeEvent": [
+				"Child sObject [EmailMessageChangeEvent] is not processed"
+			],
+			"Campaign.FeedSubscriptionsForEntity => EntitySubscription": [
+				"Child sObject [EntitySubscription] is not processed"
+			],
+			"Campaign.Events => Event": [
+				"Child sObject [Event] is not processed"
+			],
+			"Campaign.null => EventChangeEvent": [
+				"Child sObject [EventChangeEvent] is not processed"
+			],
+			"Campaign.null => EventRelationChangeEvent": [
+				"Child sObject [EventRelationChangeEvent] is not processed"
+			],
+			"Campaign.null => FeedComment": [
+				"Child sObject [FeedComment] is not processed"
+			],
+			"Campaign.null => FeedItem": [
+				"Child sObject [FeedItem] is not processed"
+			],
+			"Campaign.null => FlowExecutionErrorEvent": [
+				"Child sObject [FlowExecutionErrorEvent] is not processed"
+			],
+			"Campaign.FlowOrchestrationWorkItems => FlowOrchestrationWorkItem": [
+				"Child sObject [FlowOrchestrationWorkItem] is not processed"
+			],
+			"Campaign.null => FlowRecordRelation": [
+				"Child sObject [FlowRecordRelation] is not processed"
+			],
+			"Campaign.ListEmails => ListEmail": [
+				"Child sObject [ListEmail] is not processed"
+			],
+			"Campaign.null => ListEmailChangeEvent": [
+				"Child sObject [ListEmailChangeEvent] is not processed"
+			],
+			"Campaign.ListEmailRecipientSources => ListEmailRecipientSource": [
+				"Child sObject [ListEmailRecipientSource] is not processed"
+			],
+			"Campaign.OpenActivities => OpenActivity": [
+				"Child sObject [OpenActivity] is not processed"
+			],
+			"Campaign.null => OpportunityChangeEvent": [
+				"Child sObject [OpportunityChangeEvent] is not processed"
+			],
+			"Campaign.null => OutgoingEmail": [
+				"Child sObject [OutgoingEmail] is not processed"
+			],
+			"Campaign.ProcessInstances => ProcessInstance": [
+				"Child sObject [ProcessInstance] is not processed"
+			],
+			"Campaign.null => ProcessInstanceChangeEvent": [
+				"Child sObject [ProcessInstanceChangeEvent] is not processed"
+			],
+			"Campaign.ProcessSteps => ProcessInstanceHistory": [
+				"Child sObject [ProcessInstanceHistory] is not processed"
+			],
+			"Campaign.RecordActions => RecordAction": [
+				"Child sObject [RecordAction] is not processed"
+			],
+			"Campaign.RecordActionHistories => RecordActionHistory": [
+				"Child sObject [RecordActionHistory] is not processed"
+			],
+			"Campaign.Tasks => Task": [
+				"Child sObject [Task] is not processed"
+			],
+			"Campaign.null => TaskChangeEvent": [
+				"Child sObject [TaskChangeEvent] is not processed"
+			],
+			"Campaign.TopicAssignments => TopicAssignment": [
+				"Child sObject [TopicAssignment] is not processed"
 			],
 			"Opportunity.null => AIInsightValue": [
 				"Child sObject [AIInsightValue] is not processed"

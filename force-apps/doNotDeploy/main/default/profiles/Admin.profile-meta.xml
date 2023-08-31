@@ -72,7 +72,7 @@
     </applicationVisibilities>
     <applicationVisibilities>
         <application>LWC_Demo</application>
-        <default>true</default>
+        <default>false</default>
         <visible>true</visible>
     </applicationVisibilities>
     <custom>false</custom>

@@ -5,7 +5,6 @@
     <oauthConfig>
         <callbackUrl>http://localhost:3000/callback
 https://oauth.pstmn.io/v1/browser-callback</callbackUrl>
-        <consumerKey>3MVG9_I_oWkIqLrlr.zCVkQQcm2jWkX.yvDvANdvUS.LSQhImZvbtEZz3lHDaV5w7wvyAsJm5HlUNbCD8kM6W</consumerKey>
         <isAdminApproved>false</isAdminApproved>
         <isConsumerSecretOptional>true</isConsumerSecretOptional>
         <isIntrospectAllTokens>false</isIntrospectAllTokens>
