@@ -1,0 +1,23 @@
+{
+	"fetched": 1,
+	"records": [
+		{
+			"attributes": {
+				"type": "PushTopic",
+				"url": "/services/data/v59.0/sobjects/PushTopic/0IF6t0000000dyrGAA"
+			},
+			"ApiVersion": 59,
+			"Description": null,
+			"Id": "0IF6t0000000dyrGAA",
+			"IsActive": true,
+			"Name": "AccountUpdates",
+			"NotifyForFields": "Referenced",
+			"NotifyForOperationCreate": true,
+			"NotifyForOperationDelete": true,
+			"NotifyForOperationUndelete": true,
+			"NotifyForOperationUpdate": true,
+			"Query": "SELECT Id, Name, Phone FROM Account WHERE BillingCity='San Francisco'"
+		}
+	],
+	"total": 1
+}

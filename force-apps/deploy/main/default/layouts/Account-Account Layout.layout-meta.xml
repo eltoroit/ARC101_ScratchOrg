@@ -11,6 +11,10 @@
                 <behavior>Required</behavior>
                 <field>Name</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CustomerId__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -206,6 +210,11 @@
         </relatedContentItems>
     </relatedContent>
     <relatedLists>
+        <fields>ExternalId</fields>
+        <fields>DisplayUrl</fields>
+        <relatedList>xOrder__x.customerID__c</relatedList>
+    </relatedLists>
+    <relatedLists>
         <fields>FULL_NAME</fields>
         <fields>CONTACT.TITLE</fields>
         <fields>CONTACT.EMAIL</fields>
@@ -266,7 +275,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h6t0000024EbF</masterLabel>
+        <masterLabel>00h6t0000024DlI</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>
